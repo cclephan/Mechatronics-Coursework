@@ -1,0 +1,107 @@
+\hypertarget{task__hardware_8py}{}\doxysection{task\+\_\+hardware.\+py File Reference}
+\label{task__hardware_8py}\index{task\_hardware.py@{task\_hardware.py}}
+
+
+Task to assign motors and encoders to hardware pins, checking for user to disable faults, and setting duty cycle to shared value.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtask__hardware_1_1Task__Hardware}{task\+\_\+hardware.\+Task\+\_\+\+Hardware}}
+\begin{DoxyCompactList}\small\item\em Encoder and motor task methods. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{task__hardware_8py_a8f5792fdbe15977812268f35a4513995}\label{task__hardware_8py_a8f5792fdbe15977812268f35a4513995}} 
+{\bfseries task\+\_\+hardware.\+pin\+B4} = pyb.\+Pin(pyb.\+Pin.\+cpu.\+B4)
+\begin{DoxyCompactList}\small\item\em Sets up first pin for motor 1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{task__hardware_8py_a022e876bea3391d5f13cc51e9291295c}\label{task__hardware_8py_a022e876bea3391d5f13cc51e9291295c}} 
+{\bfseries task\+\_\+hardware.\+pin\+B5} = pyb.\+Pin(pyb.\+Pin.\+cpu.\+B5)
+\begin{DoxyCompactList}\small\item\em Sets up second pin for motor 1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{task__hardware_8py_a869b3f281d06d050aed77faee3267bba}\label{task__hardware_8py_a869b3f281d06d050aed77faee3267bba}} 
+{\bfseries task\+\_\+hardware.\+pin\+B0} = pyb.\+Pin(pyb.\+Pin.\+cpu.\+B0)
+\begin{DoxyCompactList}\small\item\em Sets up first pin for motor 2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{task__hardware_8py_a620ec053193e879ad7da5c35261490af}\label{task__hardware_8py_a620ec053193e879ad7da5c35261490af}} 
+{\bfseries task\+\_\+hardware.\+pin\+B1} = pyb.\+Pin(pyb.\+Pin.\+cpu.\+B1)
+\begin{DoxyCompactList}\small\item\em Sets up second pin for motor 2. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{task__hardware_8py_a785600cbbaac22c03842f7092f2d2ccf}{task\+\_\+hardware.\+pin\+B6}} = pyb.\+Pin (pyb.\+Pin.\+cpu.\+B6)
+\begin{DoxyCompactList}\small\item\em Encoder Pins. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{task__hardware_8py_a9e897909baf87c6d9db0bff270c20929}\label{task__hardware_8py_a9e897909baf87c6d9db0bff270c20929}} 
+{\bfseries task\+\_\+hardware.\+pin\+B7} = pyb.\+Pin (pyb.\+Pin.\+cpu.\+B7)
+\begin{DoxyCompactList}\small\item\em Sets up second pin for encoder 1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{task__hardware_8py_a71dfebef23b27865c274cb596050ebad}\label{task__hardware_8py_a71dfebef23b27865c274cb596050ebad}} 
+{\bfseries task\+\_\+hardware.\+pin\+C6} = pyb.\+Pin (pyb.\+Pin.\+cpu.\+C6)
+\begin{DoxyCompactList}\small\item\em Sets up first pin for encoder 2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{task__hardware_8py_a5d5b20bce013fef59263ed82cbe5f21d}\label{task__hardware_8py_a5d5b20bce013fef59263ed82cbe5f21d}} 
+{\bfseries task\+\_\+hardware.\+pin\+C7} = pyb.\+Pin (pyb.\+Pin.\+cpu.\+C7)
+\begin{DoxyCompactList}\small\item\em Sets up second pin for encoder 2. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{task__hardware_8py_ab447ab3161d9f4082b495f821a709072}{task\+\_\+hardware.\+ID}} = 0
+\begin{DoxyCompactList}\small\item\em Motor Shares Index referances. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{task__hardware_8py_a18ca5d1f7813a73174b1b1737e799760}\label{task__hardware_8py_a18ca5d1f7813a73174b1b1737e799760}} 
+int {\bfseries task\+\_\+hardware.\+POSITION} = 1
+\begin{DoxyCompactList}\small\item\em Index reference for current position (rad) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{task__hardware_8py_aef8f087449c785a1d0baeb0515000cb7}\label{task__hardware_8py_aef8f087449c785a1d0baeb0515000cb7}} 
+int {\bfseries task\+\_\+hardware.\+VELOCITY} = 2
+\begin{DoxyCompactList}\small\item\em Index reference for current velocity (rad/s) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{task__hardware_8py_ac0ebd98f60419be077f0890efe64c512}\label{task__hardware_8py_ac0ebd98f60419be077f0890efe64c512}} 
+int {\bfseries task\+\_\+hardware.\+REF\+\_\+\+POSITION} = 3
+\begin{DoxyCompactList}\small\item\em Index reference for reference (previous) position (rad) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{task__hardware_8py_ae872020175799cbabfa4ca02dcb2d4ec}\label{task__hardware_8py_ae872020175799cbabfa4ca02dcb2d4ec}} 
+int {\bfseries task\+\_\+hardware.\+REF\+\_\+\+VELOCITY} = 4
+\begin{DoxyCompactList}\small\item\em Index reference for reference (previous) velocity (rad/s) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{task__hardware_8py_a4dbff2e5e9b3e20482b0c05db88b5d02}\label{task__hardware_8py_a4dbff2e5e9b3e20482b0c05db88b5d02}} 
+int {\bfseries task\+\_\+hardware.\+IS\+\_\+\+ZERO} = 5
+\begin{DoxyCompactList}\small\item\em Index reference for zero flag. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{task__hardware_8py_a747a0416e4ca2bbff61a647bf9568957}\label{task__hardware_8py_a747a0416e4ca2bbff61a647bf9568957}} 
+int {\bfseries task\+\_\+hardware.\+DIS\+\_\+\+FAULT} = 6
+\begin{DoxyCompactList}\small\item\em Index reference for disable fault flag. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{task__hardware_8py_a5edc80e6c7f3eefe5644b237f38ffec9}\label{task__hardware_8py_a5edc80e6c7f3eefe5644b237f38ffec9}} 
+int {\bfseries task\+\_\+hardware.\+PID} = 7
+\begin{DoxyCompactList}\small\item\em Index reference for PID controller. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{task__hardware_8py_ac8d48dd5e51006af980e9f396b71a3e7}\label{task__hardware_8py_ac8d48dd5e51006af980e9f396b71a3e7}} 
+int {\bfseries task\+\_\+hardware.\+DUTY} = 8
+\begin{DoxyCompactList}\small\item\em Index reference for current duty (\% PWM) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{task__hardware_8py_a1665c045e83ea6bf193499a1cfab835f}\label{task__hardware_8py_a1665c045e83ea6bf193499a1cfab835f}} 
+int {\bfseries task\+\_\+hardware.\+IS\+\_\+\+FAULT} = 9
+\begin{DoxyCompactList}\small\item\em Index reference for checking if there is a fault. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{task__hardware_8py_aed6148a42a6b1382d969e8e5d522027e}\label{task__hardware_8py_aed6148a42a6b1382d969e8e5d522027e}} 
+tuple {\bfseries task\+\_\+hardware.\+ticks\+\_\+to\+\_\+rad} = (2$\ast$math.\+pi/4000)
+\begin{DoxyCompactList}\small\item\em Ratio of radians to ticks on encoder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Task to assign motors and encoders to hardware pins, checking for user to disable faults, and setting duty cycle to shared value. 
+
+Sets motors/encoders to their repective pins and channel numbers then enables the driver. A controller is instantiated to be used to control duty based on a current and reference velocity. Tasks constantly updates shared values and checks for flags executed in task user. \begin{DoxyAuthor}{Author}
+Christian Clephan 
+
+John Bennett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 13, 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{task__hardware_8py_ab447ab3161d9f4082b495f821a709072}\label{task__hardware_8py_ab447ab3161d9f4082b495f821a709072}} 
+\index{task\_hardware.py@{task\_hardware.py}!ID@{ID}}
+\index{ID@{ID}!task\_hardware.py@{task\_hardware.py}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily int task\+\_\+hardware.\+ID = 0}
+
+
+
+Motor Shares Index referances. 
+
+Index reference for encoder number \mbox{\Hypertarget{task__hardware_8py_a785600cbbaac22c03842f7092f2d2ccf}\label{task__hardware_8py_a785600cbbaac22c03842f7092f2d2ccf}} 
+\index{task\_hardware.py@{task\_hardware.py}!pinB6@{pinB6}}
+\index{pinB6@{pinB6}!task\_hardware.py@{task\_hardware.py}}
+\doxysubsubsection{\texorpdfstring{pinB6}{pinB6}}
+{\footnotesize\ttfamily task\+\_\+hardware.\+pin\+B6 = pyb.\+Pin (pyb.\+Pin.\+cpu.\+B6)}
+
+
+
+Encoder Pins. 
+
+Sets up first pin for encoder 1 

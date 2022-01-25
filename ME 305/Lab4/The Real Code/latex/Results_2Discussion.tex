@@ -1,0 +1,26 @@
+\hypertarget{Results_2Discussion_sec_report}{}\doxysection{Discussion}\label{Results_2Discussion_sec_report}
+Below are images of our FSM used by our lab 4 code, a block diagram of the closed loop control, and our progression plot.  ~\newline
+ For this assignment we incorporated our encoder driver with our motor driver to perform closed-\/loop speed control. We added new variables to the motor such as PID and REF\+\_\+ VELOCITY and a new class called closedloop. This allowed us to track the error in the system and perform closed loop control. Our closedloop class can perform integral and derivative control but we decided to start our tuning with only proportional control. To accomplish this we created a new FSM seen in Figure 1. The new state PID Prompt in the user task can be accessed by inputting 1 or 2 in the putty command terminal this task prompts for numeric values to proportional, integral, derivative and the desired velocity of the system. Then our motor waits 1 second in the waiting for user input task then the motor starts and the data collection continues for 9 more seconds. totalling 10 seconds of data collection. Then turns off and waits for a new PID Prompt.
+
+ ~\newline
+
+
+Our closed loop controller (Figure 2) begins with a step input function, which is specified by the user when either a 1 or 2 is pressed. This prompts the user for PID gains and a set-\/point velocity, which will be the magnitude of the input step function. The PID gains act on an error signal which is the difference between input motor speed versus what’s output and measured by the encoder. After the PID gain block the signal is in duty percent, which is saturated between -\/100 and 100\%. This signal is converted to a voltage by Kpwm, where 12V from the power supply would create 100\% duty cycle. Next, the signal is sent to the plant (motor) where the output is motor speed. The encoder reads motor velocity and sends feedback to the beginning of the block diagram to compare what’s being input by the code versus the real world motor speed. ~\newline
+
+
+When beginning our testing of the closed loop controller we started our tuning of the controller with our positionial controller, Kp of our PID. In Figure 3, we set the goal velocity to 100 rad/s for tuning with 4 different Kp gains. We began with small proportional gain values to ensure our response did not overload or fault the hardware. ~\newline
+
+
+When beginning our testing of the closed loop controller we started our tuning of the controller with our positionial controller, Kp of our PID. In Figure 3, we set the goal velocity to 100 rad/s for tuning with 4 different Kp gains. We began with small proportional gain values to ensure our response did not overload or fault the hardware.  ~\newline
+
+
+The first test was a Kp = .5 V/(rad/s) (gray) this value produced a max velocity of 50 rad/s much smaller than what we expected. We then decided to increase the Kp = 1 V/(rad/s) (blue) this significantly increased the velocity to 75 rad/s. Since we didn\textquotesingle{}t hit the desired velocity we doubled the gain, Kp = 2 V/(rad/s) (orange) the steady state velocity was 85 rad/s. From the three data points recorded we could tell there was a natural decay when increasing 100 rad/s that caused us to choose a Kp = 5 V/(rad/s) (yellow), which yielded a velocity near 100 rad/s. From further testing any Kp values above 5 V/(rad/s) has a chance of making the system go unstable and faults the motor. Therefore we conclude that a Kp = 5 V/(rad/s) is the optimal choice when performing pure proportional control on a free shaft.
+
+\begin{DoxyAuthor}{Author}
+Christian Clephan 
+
+John Bennett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 14 2021 
+\end{DoxyDate}

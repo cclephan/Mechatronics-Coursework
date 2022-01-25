@@ -1,0 +1,123 @@
+\hypertarget{classmotor_1_1DRV8847}{}\doxysection{motor.\+DRV8847 Class Reference}
+\label{classmotor_1_1DRV8847}\index{motor.DRV8847@{motor.DRV8847}}
+
+
+A motor driver class for the \mbox{\hyperlink{classmotor_1_1DRV8847}{DRV8847}} from TI.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classmotor_1_1DRV8847_aaad82b93ab3df2e7cb1a118b4ab40eae}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, timer\+Num)
+\begin{DoxyCompactList}\small\item\em Initializes and returns a \mbox{\hyperlink{classmotor_1_1DRV8847}{DRV8847}} object. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classmotor_1_1DRV8847_a7c5129ef47c226bba081538b775c6c04}{enable}} (self)
+\begin{DoxyCompactList}\small\item\em Brings the \mbox{\hyperlink{classmotor_1_1DRV8847}{DRV8847}} out of sleep mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmotor_1_1DRV8847_a499d331126400c2b7482fecfd5934376}\label{classmotor_1_1DRV8847_a499d331126400c2b7482fecfd5934376}} 
+def {\bfseries disable} (self)
+\begin{DoxyCompactList}\small\item\em Puts the \mbox{\hyperlink{classmotor_1_1DRV8847}{DRV8847}} in sleep mode. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classmotor_1_1DRV8847_a1361fcb8e54708b9674f6ef11120ebe8}{fault\+\_\+cb}} (self, IRQ\+\_\+src)
+\begin{DoxyCompactList}\small\item\em Callback function to run on fault condition. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classmotor_1_1DRV8847_a065622c05f2dfc5e861a012f332005d4}{fault\+\_\+status}} (self)
+\begin{DoxyCompactList}\small\item\em Returns fault status. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classmotor_1_1DRV8847_ae42025d6fdee7e06e457a0dde5764653}{motor}} (self, motor\+Channel, pin\+CH1, pin\+CH2)
+\begin{DoxyCompactList}\small\item\em Initializes and returns a motor object associated with the \mbox{\hyperlink{classmotor_1_1DRV8847}{DRV8847}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmotor_1_1DRV8847_ae12c013ad2c88f56ec2db1fa6c5a654d}\label{classmotor_1_1DRV8847_ae12c013ad2c88f56ec2db1fa6c5a654d}} 
+{\bfseries timX}
+\begin{DoxyCompactList}\small\item\em Timer that is used in motors taking in parameter timer\+Num defined in main. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmotor_1_1DRV8847_a5ec31e3485464f369c8cb44e3ecd226d}\label{classmotor_1_1DRV8847_a5ec31e3485464f369c8cb44e3ecd226d}} 
+{\bfseries pin\+A15}
+\begin{DoxyCompactList}\small\item\em Pin used to enable and disable motors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmotor_1_1DRV8847_ab600fb30a57203d210f3a9dd9f3d4609}\label{classmotor_1_1DRV8847_ab600fb30a57203d210f3a9dd9f3d4609}} 
+{\bfseries pin\+B2}
+\begin{DoxyCompactList}\small\item\em Pin used to detect faults in motors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmotor_1_1DRV8847_af34b3f8c97bbad154dc1f83ae9517912}\label{classmotor_1_1DRV8847_af34b3f8c97bbad154dc1f83ae9517912}} 
+{\bfseries motor\+Int}
+\begin{DoxyCompactList}\small\item\em External interupt object that is used to detect faults, and if they are detected, uses callback function fault\+\_\+cb to disable motor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmotor_1_1DRV8847_afd8288d6efb83301d9da62895e982b17}\label{classmotor_1_1DRV8847_afd8288d6efb83301d9da62895e982b17}} 
+{\bfseries is\+Fault}
+\begin{DoxyCompactList}\small\item\em Boolean that turns true when a fault occurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A motor driver class for the \mbox{\hyperlink{classmotor_1_1DRV8847}{DRV8847}} from TI. 
+
+Objects of this class can be used to configure the \mbox{\hyperlink{classmotor_1_1DRV8847}{DRV8847}} motor driver and to create one or more objects of the \mbox{\hyperlink{classmotor_1_1Motor}{Motor}} class which can be used to perform motor control. Refer to the \mbox{\hyperlink{classmotor_1_1DRV8847}{DRV8847}} datasheet here\+: \href{https://www.ti.com/lit/ds/symlink/drv8847.pdf}{\texttt{ https\+://www.\+ti.\+com/lit/ds/symlink/drv8847.\+pdf}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmotor_1_1DRV8847_aaad82b93ab3df2e7cb1a118b4ab40eae}\label{classmotor_1_1DRV8847_aaad82b93ab3df2e7cb1a118b4ab40eae}} 
+\index{motor.DRV8847@{motor.DRV8847}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!motor.DRV8847@{motor.DRV8847}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def motor.\+DRV8847.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{timer\+Num }\end{DoxyParamCaption})}
+
+
+
+Initializes and returns a \mbox{\hyperlink{classmotor_1_1DRV8847}{DRV8847}} object. 
+
+@detials Creates timer, pins, and external interupt that will be used universally for motors. 
+\begin{DoxyParams}{Parameters}
+{\em timer\+Num} & is timer used for motors determined by the user in main held in variable timX. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmotor_1_1DRV8847_a7c5129ef47c226bba081538b775c6c04}\label{classmotor_1_1DRV8847_a7c5129ef47c226bba081538b775c6c04}} 
+\index{motor.DRV8847@{motor.DRV8847}!enable@{enable}}
+\index{enable@{enable}!motor.DRV8847@{motor.DRV8847}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily def motor.\+DRV8847.\+enable (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Brings the \mbox{\hyperlink{classmotor_1_1DRV8847}{DRV8847}} out of sleep mode. 
+
+First disables external interupt to allow motor sleep pin to be turned on then enables external interupt object. \mbox{\Hypertarget{classmotor_1_1DRV8847_a1361fcb8e54708b9674f6ef11120ebe8}\label{classmotor_1_1DRV8847_a1361fcb8e54708b9674f6ef11120ebe8}} 
+\index{motor.DRV8847@{motor.DRV8847}!fault\_cb@{fault\_cb}}
+\index{fault\_cb@{fault\_cb}!motor.DRV8847@{motor.DRV8847}}
+\doxysubsubsection{\texorpdfstring{fault\_cb()}{fault\_cb()}}
+{\footnotesize\ttfamily def motor.\+DRV8847.\+fault\+\_\+cb (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{IRQ\+\_\+src }\end{DoxyParamCaption})}
+
+
+
+Callback function to run on fault condition. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em IRQ\+\_\+src} & The source of the interrupt request. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmotor_1_1DRV8847_a065622c05f2dfc5e861a012f332005d4}\label{classmotor_1_1DRV8847_a065622c05f2dfc5e861a012f332005d4}} 
+\index{motor.DRV8847@{motor.DRV8847}!fault\_status@{fault\_status}}
+\index{fault\_status@{fault\_status}!motor.DRV8847@{motor.DRV8847}}
+\doxysubsubsection{\texorpdfstring{fault\_status()}{fault\_status()}}
+{\footnotesize\ttfamily def motor.\+DRV8847.\+fault\+\_\+status (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns fault status. 
+
+\begin{DoxyReturn}{Returns}
+Fault status. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmotor_1_1DRV8847_ae42025d6fdee7e06e457a0dde5764653}\label{classmotor_1_1DRV8847_ae42025d6fdee7e06e457a0dde5764653}} 
+\index{motor.DRV8847@{motor.DRV8847}!motor@{motor}}
+\index{motor@{motor}!motor.DRV8847@{motor.DRV8847}}
+\doxysubsubsection{\texorpdfstring{motor()}{motor()}}
+{\footnotesize\ttfamily def motor.\+DRV8847.\+motor (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{motor\+Channel,  }\item[{}]{pin\+CH1,  }\item[{}]{pin\+CH2 }\end{DoxyParamCaption})}
+
+
+
+Initializes and returns a motor object associated with the \mbox{\hyperlink{classmotor_1_1DRV8847}{DRV8847}}. 
+
+\begin{DoxyReturn}{Returns}
+An object of class \mbox{\hyperlink{classmotor_1_1Motor}{Motor}} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{motor_8py}{motor.\+py}}\end{DoxyCompactItemize}

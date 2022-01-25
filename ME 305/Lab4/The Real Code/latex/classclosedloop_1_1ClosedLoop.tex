@@ -1,0 +1,145 @@
+\hypertarget{classclosedloop_1_1ClosedLoop}{}\doxysection{closedloop.\+Closed\+Loop Class Reference}
+\label{classclosedloop_1_1ClosedLoop}\index{closedloop.ClosedLoop@{closedloop.ClosedLoop}}
+
+
+Interface with closed loop controller.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classclosedloop_1_1ClosedLoop_a8de0f4b9c01761459cc9b4a4db5942bb}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classclosedloop_1_1ClosedLoop_ab16c516ee039c566318c3f395aa64241}{PID}}, \mbox{\hyperlink{classclosedloop_1_1ClosedLoop_a90c1b78d76b048d41befbc1b62cb9632}{sat\+Lim}})
+\begin{DoxyCompactList}\small\item\em Constructs a closed loop controller. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classclosedloop_1_1ClosedLoop_a6e396086258064d49ca964554b14b438}{update}} (self, Ref, Read, tdif)
+\begin{DoxyCompactList}\small\item\em Constructs a closed loop controller. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classclosedloop_1_1ClosedLoop_a94e2330ccc0b142da91887a8dd325377}{get\+\_\+\+PID}} (self)
+\begin{DoxyCompactList}\small\item\em Gets PID object. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classclosedloop_1_1ClosedLoop_a6884a7ffe114c69a15aa7bd54c177988}{set\+\_\+\+PID}} (self, \mbox{\hyperlink{classclosedloop_1_1ClosedLoop_ab16c516ee039c566318c3f395aa64241}{PID}})
+\begin{DoxyCompactList}\small\item\em Sets PID gains. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classclosedloop_1_1ClosedLoop_a8509c53d69d1d6264b9a7cc3b80f3d3e}{sat}} (self, sat\+\_\+duty)
+\begin{DoxyCompactList}\small\item\em Saturation functionallity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classclosedloop_1_1ClosedLoop_ab16c516ee039c566318c3f395aa64241}\label{classclosedloop_1_1ClosedLoop_ab16c516ee039c566318c3f395aa64241}} 
+{\bfseries PID}
+\begin{DoxyCompactList}\small\item\em Instantiates PID controller with gains. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classclosedloop_1_1ClosedLoop_a90c1b78d76b048d41befbc1b62cb9632}\label{classclosedloop_1_1ClosedLoop_a90c1b78d76b048d41befbc1b62cb9632}} 
+{\bfseries sat\+Lim}
+\begin{DoxyCompactList}\small\item\em Instantiates duty saturation upper and lower bounds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classclosedloop_1_1ClosedLoop_a6cd2f90c97c8a3516ed9fde29d8746ba}\label{classclosedloop_1_1ClosedLoop_a6cd2f90c97c8a3516ed9fde29d8746ba}} 
+{\bfseries esum}
+\begin{DoxyCompactList}\small\item\em Sum of error over a difference in time. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclosedloop_1_1ClosedLoop_a799790a01d563865ddcfd276e158b7a4}{laste}}
+\begin{DoxyCompactList}\small\item\em Previous error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface with closed loop controller. 
+
+Contains all methods that will be used in task\+\_\+hardware to set the duty cycle based on closed loop control. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classclosedloop_1_1ClosedLoop_a8de0f4b9c01761459cc9b4a4db5942bb}\label{classclosedloop_1_1ClosedLoop_a8de0f4b9c01761459cc9b4a4db5942bb}} 
+\index{closedloop.ClosedLoop@{closedloop.ClosedLoop}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!closedloop.ClosedLoop@{closedloop.ClosedLoop}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def closedloop.\+Closed\+Loop.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{PID,  }\item[{}]{sat\+Lim }\end{DoxyParamCaption})}
+
+
+
+Constructs a closed loop controller. 
+
+Sets PID and saturation limits to what is determined by task\+\_\+hardware and instantiates error variables. 
+\begin{DoxyParams}{Parameters}
+{\em PID} & is a list containing the three gain values for Kp/\+Ki/\+Kd \\
+\hline
+{\em sat\+Lim} & is a list containing the upper and lower bounds of saturation \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classclosedloop_1_1ClosedLoop_a94e2330ccc0b142da91887a8dd325377}\label{classclosedloop_1_1ClosedLoop_a94e2330ccc0b142da91887a8dd325377}} 
+\index{closedloop.ClosedLoop@{closedloop.ClosedLoop}!get\_PID@{get\_PID}}
+\index{get\_PID@{get\_PID}!closedloop.ClosedLoop@{closedloop.ClosedLoop}}
+\doxysubsubsection{\texorpdfstring{get\_PID()}{get\_PID()}}
+{\footnotesize\ttfamily def closedloop.\+Closed\+Loop.\+get\+\_\+\+PID (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Gets PID object. 
+
+Quick method to determine what controller is using for PID gains. \mbox{\Hypertarget{classclosedloop_1_1ClosedLoop_a8509c53d69d1d6264b9a7cc3b80f3d3e}\label{classclosedloop_1_1ClosedLoop_a8509c53d69d1d6264b9a7cc3b80f3d3e}} 
+\index{closedloop.ClosedLoop@{closedloop.ClosedLoop}!sat@{sat}}
+\index{sat@{sat}!closedloop.ClosedLoop@{closedloop.ClosedLoop}}
+\doxysubsubsection{\texorpdfstring{sat()}{sat()}}
+{\footnotesize\ttfamily def closedloop.\+Closed\+Loop.\+sat (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sat\+\_\+duty }\end{DoxyParamCaption})}
+
+
+
+Saturation functionallity. 
+
+Controls if a duty is too large from what is calculated in update method. 
+\begin{DoxyParams}{Parameters}
+{\em sat\+\_\+duty} & is the value sent by what is calculated in update method. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sends back either the saturated limit if duty is too high or original duty based on bounds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classclosedloop_1_1ClosedLoop_a6884a7ffe114c69a15aa7bd54c177988}\label{classclosedloop_1_1ClosedLoop_a6884a7ffe114c69a15aa7bd54c177988}} 
+\index{closedloop.ClosedLoop@{closedloop.ClosedLoop}!set\_PID@{set\_PID}}
+\index{set\_PID@{set\_PID}!closedloop.ClosedLoop@{closedloop.ClosedLoop}}
+\doxysubsubsection{\texorpdfstring{set\_PID()}{set\_PID()}}
+{\footnotesize\ttfamily def closedloop.\+Closed\+Loop.\+set\+\_\+\+PID (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{PID }\end{DoxyParamCaption})}
+
+
+
+Sets PID gains. 
+
+Sets PID gains to some new list of values for Kp/\+Ki/\+Kd 
+\begin{DoxyParams}{Parameters}
+{\em PID} & is a list containing the three gain values for Kp/\+Ki/\+Kd \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classclosedloop_1_1ClosedLoop_a6e396086258064d49ca964554b14b438}\label{classclosedloop_1_1ClosedLoop_a6e396086258064d49ca964554b14b438}} 
+\index{closedloop.ClosedLoop@{closedloop.ClosedLoop}!update@{update}}
+\index{update@{update}!closedloop.ClosedLoop@{closedloop.ClosedLoop}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily def closedloop.\+Closed\+Loop.\+update (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{Ref,  }\item[{}]{Read,  }\item[{}]{tdif }\end{DoxyParamCaption})}
+
+
+
+Constructs a closed loop controller. 
+
+Sets PID and saturation limits to what is determined by task\+\_\+hardware and instantiates error variables. 
+\begin{DoxyParams}{Parameters}
+{\em PID} & is a list containing the three gain values for Kp/\+Ki/\+Kd \\
+\hline
+{\em sat\+Lim} & is a list containing the upper and lower bounds of saturation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sends back saturated duty value using sat method. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classclosedloop_1_1ClosedLoop_a799790a01d563865ddcfd276e158b7a4}\label{classclosedloop_1_1ClosedLoop_a799790a01d563865ddcfd276e158b7a4}} 
+\index{closedloop.ClosedLoop@{closedloop.ClosedLoop}!laste@{laste}}
+\index{laste@{laste}!closedloop.ClosedLoop@{closedloop.ClosedLoop}}
+\doxysubsubsection{\texorpdfstring{laste}{laste}}
+{\footnotesize\ttfamily closedloop.\+Closed\+Loop.\+laste}
+
+
+
+Previous error. 
+
+Error signal which is the difference between a reference and input (current) value.
+
+Delta error calculated by taking difference in error values over a time difference 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{closedloop_8py}{closedloop.\+py}}\end{DoxyCompactItemize}

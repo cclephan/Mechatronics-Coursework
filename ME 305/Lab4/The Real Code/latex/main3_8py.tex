@@ -1,0 +1,83 @@
+\hypertarget{main3_8py}{}\doxysection{main3.\+py File Reference}
+\label{main3_8py}\index{main3.py@{main3.py}}
+
+
+Main file, which hardeware and user task are being run.  
+
+
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main3_8py_adf57ee19517fc831054ac1e15aeaebde}\label{main3_8py_adf57ee19517fc831054ac1e15aeaebde}} 
+int {\bfseries main3.\+T\+\_\+motor} = 2
+\begin{DoxyCompactList}\small\item\em Encoder task period (2 milliseconds) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main3_8py_ae963d66b16eaa6635f426e706907cbb6}\label{main3_8py_ae963d66b16eaa6635f426e706907cbb6}} 
+int {\bfseries main3.\+T\+\_\+user} = 40
+\begin{DoxyCompactList}\small\item\em User task period (40 milliseconds) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main3_8py_adc9d4307bb694f55bf96557e2473ed0b}{main3.\+ID}} = 0
+\begin{DoxyCompactList}\small\item\em Motor Shares Index referances. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main3_8py_a5591a980adee54359bf7f35b7016bc9a}\label{main3_8py_a5591a980adee54359bf7f35b7016bc9a}} 
+int {\bfseries main3.\+POSITION} = 1
+\begin{DoxyCompactList}\small\item\em Index reference for current position (rad) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main3_8py_a6e2200798f9d7a8b9819717ddfecbcf8}\label{main3_8py_a6e2200798f9d7a8b9819717ddfecbcf8}} 
+int {\bfseries main3.\+VELOCITY} = 2
+\begin{DoxyCompactList}\small\item\em Index reference for current velocity (rad/s) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main3_8py_af09cb1f1ad2395c87a99b86e83c00a84}\label{main3_8py_af09cb1f1ad2395c87a99b86e83c00a84}} 
+int {\bfseries main3.\+REF\+\_\+\+POSITION} = 3
+\begin{DoxyCompactList}\small\item\em Index reference for reference (previous) position (rad) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main3_8py_a7db49b4b2e4caf10aef3bb72743d5eb2}\label{main3_8py_a7db49b4b2e4caf10aef3bb72743d5eb2}} 
+int {\bfseries main3.\+REF\+\_\+\+VELOCITY} = 4
+\begin{DoxyCompactList}\small\item\em Index reference for reference (previous) velocity (rad/s) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main3_8py_a92ea3f98c50902920b0969973dbae125}\label{main3_8py_a92ea3f98c50902920b0969973dbae125}} 
+int {\bfseries main3.\+IS\+\_\+\+ZERO} = 5
+\begin{DoxyCompactList}\small\item\em Index reference for zero flag. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main3_8py_a9286220dbfba76157c9038f7c44f14f3}\label{main3_8py_a9286220dbfba76157c9038f7c44f14f3}} 
+int {\bfseries main3.\+DIS\+\_\+\+FAULT} = 6
+\begin{DoxyCompactList}\small\item\em Index reference for disable fault flag. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main3_8py_a5be81d0394ac01f8792d77d3d180a27d}\label{main3_8py_a5be81d0394ac01f8792d77d3d180a27d}} 
+int {\bfseries main3.\+PID} = 7
+\begin{DoxyCompactList}\small\item\em Index reference for PID controller. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main3_8py_ac2bd5812d2755bceabd49f0c1fa82f63}\label{main3_8py_ac2bd5812d2755bceabd49f0c1fa82f63}} 
+int {\bfseries main3.\+DUTY} = 8
+\begin{DoxyCompactList}\small\item\em Index reference for current duty (\% PWM) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main3_8py_a88c3d7fbc346ca20dc180d1804dcb11e}\label{main3_8py_a88c3d7fbc346ca20dc180d1804dcb11e}} 
+int {\bfseries main3.\+IS\+\_\+\+FAULT} = 9
+\begin{DoxyCompactList}\small\item\em Index reference for checking if there is a fault. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main3_8py_ab5149b71074ec3e5d232ab1391d540ef}\label{main3_8py_ab5149b71074ec3e5d232ab1391d540ef}} 
+{\bfseries main3.\+Motor1\+Share} = \mbox{\hyperlink{classshares_1_1ShareMotorInfo}{shares.\+Share\+Motor\+Info}}(\mbox{[}1,0,0,0,0,False,False,\mbox{[}0,0,0\mbox{]},0,False\mbox{]})
+\begin{DoxyCompactList}\small\item\em Motor1\+Share and Motor2\+Share contains all the share data for a given motor \mbox{[}Encoder number (int), Current Position (ticks), Current delta (ticks/period), duty(int), Zero (boolean), Fault(boolean)\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main3_8py_a72bdb2d11cdd81c0264ba0a116a52abe}\label{main3_8py_a72bdb2d11cdd81c0264ba0a116a52abe}} 
+{\bfseries main3.\+Motor2\+Share} = \mbox{\hyperlink{classshares_1_1ShareMotorInfo}{shares.\+Share\+Motor\+Info}}(\mbox{[}2,0,0,0,0,False,False,\mbox{[}0,0,0\mbox{]},0,False\mbox{]})
+\item 
+\mbox{\Hypertarget{main3_8py_a64e17236f7f14a9de3ed72ccd30efbc0}\label{main3_8py_a64e17236f7f14a9de3ed72ccd30efbc0}} 
+{\bfseries main3.\+motor\+\_\+drv} = \mbox{\hyperlink{classmotor_1_1DRV8847}{motor.\+DRV8847}}(3)
+\begin{DoxyCompactList}\small\item\em Creates motor driver object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main3_8py_a4da065b70650907fd121f149b8830ffb}\label{main3_8py_a4da065b70650907fd121f149b8830ffb}} 
+{\bfseries main3.\+motor\+Task1} = \mbox{\hyperlink{classtask__hardware_1_1Task__Hardware}{task\+\_\+hardware.\+Task\+\_\+\+Hardware}}(T\+\_\+motor,Motor1\+Share,motor\+\_\+drv)
+\begin{DoxyCompactList}\small\item\em Creating a variable for the hardware task in the Task\+\_\+\+Hardware Class at period T\+\_\+motor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main3_8py_aea9ae35658eaba1a6d76cd1fea946b6b}\label{main3_8py_aea9ae35658eaba1a6d76cd1fea946b6b}} 
+{\bfseries main3.\+motor\+Task2} = \mbox{\hyperlink{classtask__hardware_1_1Task__Hardware}{task\+\_\+hardware.\+Task\+\_\+\+Hardware}}(T\+\_\+motor,Motor2\+Share,motor\+\_\+drv)
+\begin{DoxyCompactList}\small\item\em Creating a variable for the hardware task in the Task\+\_\+\+Hardware Class at period T\+\_\+motor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main3_8py_a073c59984c4a6b7b176c7d9618446e9e}\label{main3_8py_a073c59984c4a6b7b176c7d9618446e9e}} 
+{\bfseries main3.\+user\+Task} = \mbox{\hyperlink{classtask__user__v3_1_1Task__User}{task\+\_\+user\+\_\+v3.\+Task\+\_\+\+User}}(T\+\_\+user,Motor1\+Share,Motor2\+Share)
+\begin{DoxyCompactList}\small\item\em Creating a variable for the user task in the Task\+\_\+\+User Class at period T\+\_\+user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main file, which hardeware and user task are being run. 
+
+File imports the classes for each task and calls out the period at which they will be run. The tasks are created as objects and share objects containing information shared to operate motor. Additionally a motor driver is created to be called as a parameter in motor task. A while loop is created to constantly run through tasks at their frequency specified by period variables. The user can press cntrl+c as a keyboard interupt to stop the program. See Results/\+Discussion page for data collection. ~\newline
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main3_8py_adc9d4307bb694f55bf96557e2473ed0b}\label{main3_8py_adc9d4307bb694f55bf96557e2473ed0b}} 
+\index{main3.py@{main3.py}!ID@{ID}}
+\index{ID@{ID}!main3.py@{main3.py}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily int main3.\+ID = 0}
+
+
+
+Motor Shares Index referances. 
+
+Index reference for encoder number 

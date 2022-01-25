@@ -1,0 +1,121 @@
+\hypertarget{classtask__hardware_1_1Task__Hardware}{}\doxysection{task\+\_\+hardware.\+Task\+\_\+\+Hardware Class Reference}
+\label{classtask__hardware_1_1Task__Hardware}\index{task\_hardware.Task\_Hardware@{task\_hardware.Task\_Hardware}}
+
+
+Encoder and motor task methods.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classtask__hardware_1_1Task__Hardware_a99a29e8a99a149dcaae083138be0e7e2}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classtask__hardware_1_1Task__Hardware_a5bd133c8bcd17fa6984a823bd5240af6}{period}}, \mbox{\hyperlink{classtask__hardware_1_1Task__Hardware_a04eae86ae233c986fe123b067ffde574}{Motor\+Share}}, \mbox{\hyperlink{classtask__hardware_1_1Task__Hardware_aea37391a357803647648e94c7f6fdcd7}{motor\+\_\+drv}})
+\begin{DoxyCompactList}\small\item\em Constructs an hardware task object. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classtask__hardware_1_1Task__Hardware_ad08b3503ab89b0c5ae0e746da4a74f90}{run}} (self)
+\begin{DoxyCompactList}\small\item\em Updates shared values of current/reference position and velocity. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classtask__hardware_1_1Task__Hardware_af52c8d4597d24f4a84a4059aa998b941}{next\+Update}} (self)
+\begin{DoxyCompactList}\small\item\em Updates encoder position, velocity, and time then sets duty to what is calculated in controller update method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtask__hardware_1_1Task__Hardware_a5bd133c8bcd17fa6984a823bd5240af6}\label{classtask__hardware_1_1Task__Hardware_a5bd133c8bcd17fa6984a823bd5240af6}} 
+{\bfseries period}
+\begin{DoxyCompactList}\small\item\em Defines period as what is called in main for period parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__hardware_1_1Task__Hardware_adb70ab5d34934729741ac14c2e237b84}\label{classtask__hardware_1_1Task__Hardware_adb70ab5d34934729741ac14c2e237b84}} 
+{\bfseries next\+\_\+time}
+\begin{DoxyCompactList}\small\item\em Time adjusts once clock reaches the period value plus the current time. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtask__hardware_1_1Task__Hardware_adc6c943215cca3cde91c165c3330fa44}{last\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em Time time of last run. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__hardware_1_1Task__Hardware_a04eae86ae233c986fe123b067ffde574}\label{classtask__hardware_1_1Task__Hardware_a04eae86ae233c986fe123b067ffde574}} 
+{\bfseries Motor\+Share}
+\begin{DoxyCompactList}\small\item\em Shares all relevavant motor info \mbox{[}Encoder number (int), Current Position (ticks), Current delta (ticks/period), duty(int), Zero (boolean), Fault(boolean)\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__hardware_1_1Task__Hardware_aea37391a357803647648e94c7f6fdcd7}\label{classtask__hardware_1_1Task__Hardware_aea37391a357803647648e94c7f6fdcd7}} 
+{\bfseries motor\+\_\+drv}
+\begin{DoxyCompactList}\small\item\em Instantiates motor driver object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__hardware_1_1Task__Hardware_abd0bf9aef6774ee29cf3864d01717875}\label{classtask__hardware_1_1Task__Hardware_abd0bf9aef6774ee29cf3864d01717875}} 
+{\bfseries motor}
+\begin{DoxyCompactList}\small\item\em Creates motor object from motor function in DRV8847 driver with specified chanel and pins. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtask__hardware_1_1Task__Hardware_a0dfea566d8006b18a421cddfba837096}{encoder}}
+\begin{DoxyCompactList}\small\item\em Creates encoder object with functionallity described in encoder driver file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__hardware_1_1Task__Hardware_a62550dd054f87dfac6e4c6edcb0edfa5}\label{classtask__hardware_1_1Task__Hardware_a62550dd054f87dfac6e4c6edcb0edfa5}} 
+{\bfseries Controller}
+\begin{DoxyCompactList}\small\item\em Instantiates controller object that reads PID initial values and sets duty limits to -\/100 and 100. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Encoder and motor task methods. 
+
+Contains logic to be used with hardware based on what is desired from commands sent by task user. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtask__hardware_1_1Task__Hardware_a99a29e8a99a149dcaae083138be0e7e2}\label{classtask__hardware_1_1Task__Hardware_a99a29e8a99a149dcaae083138be0e7e2}} 
+\index{task\_hardware.Task\_Hardware@{task\_hardware.Task\_Hardware}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!task\_hardware.Task\_Hardware@{task\_hardware.Task\_Hardware}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def task\+\_\+hardware.\+Task\+\_\+\+Hardware.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{period,  }\item[{}]{Motor\+Share,  }\item[{}]{motor\+\_\+drv }\end{DoxyParamCaption})}
+
+
+
+Constructs an hardware task object. 
+
+Instantiates period, a variable changing for every period, motor object 
+\begin{DoxyParams}{Parameters}
+{\em Period} & at which motor updates defined by user in main. \\
+\hline
+{\em Motor\+Share} & is a share object that contains all relevent info about the motor \\
+\hline
+{\em motor\+\_\+drv} & is the DRV8847 driver \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtask__hardware_1_1Task__Hardware_af52c8d4597d24f4a84a4059aa998b941}\label{classtask__hardware_1_1Task__Hardware_af52c8d4597d24f4a84a4059aa998b941}} 
+\index{task\_hardware.Task\_Hardware@{task\_hardware.Task\_Hardware}!nextUpdate@{nextUpdate}}
+\index{nextUpdate@{nextUpdate}!task\_hardware.Task\_Hardware@{task\_hardware.Task\_Hardware}}
+\doxysubsubsection{\texorpdfstring{nextUpdate()}{nextUpdate()}}
+{\footnotesize\ttfamily def task\+\_\+hardware.\+Task\+\_\+\+Hardware.\+next\+Update (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Updates encoder position, velocity, and time then sets duty to what is calculated in controller update method. 
+
+Uses encoder driver to update position/velocity from which the values are written into the Motor\+Share list and the period is updated. Duty is determined by controller update method, which takes in reference/current velocity and a time difference. \mbox{\Hypertarget{classtask__hardware_1_1Task__Hardware_ad08b3503ab89b0c5ae0e746da4a74f90}\label{classtask__hardware_1_1Task__Hardware_ad08b3503ab89b0c5ae0e746da4a74f90}} 
+\index{task\_hardware.Task\_Hardware@{task\_hardware.Task\_Hardware}!run@{run}}
+\index{run@{run}!task\_hardware.Task\_Hardware@{task\_hardware.Task\_Hardware}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily def task\+\_\+hardware.\+Task\+\_\+\+Hardware.\+run (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Updates shared values of current/reference position and velocity. 
+
+Detects for UI flags and if PID gains change.
+
+Constantly updates motor position and velocity and executes logic for flags sent from task\+\_\+user such as zeroing position or reseting velocity and PID gains when a fault is disabled. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtask__hardware_1_1Task__Hardware_a0dfea566d8006b18a421cddfba837096}\label{classtask__hardware_1_1Task__Hardware_a0dfea566d8006b18a421cddfba837096}} 
+\index{task\_hardware.Task\_Hardware@{task\_hardware.Task\_Hardware}!encoder@{encoder}}
+\index{encoder@{encoder}!task\_hardware.Task\_Hardware@{task\_hardware.Task\_Hardware}}
+\doxysubsubsection{\texorpdfstring{encoder}{encoder}}
+{\footnotesize\ttfamily task\+\_\+hardware.\+Task\+\_\+\+Hardware.\+encoder}
+
+
+
+Creates encoder object with functionallity described in encoder driver file. 
+
+Parameters for object dictate encoder pins and timer. \mbox{\Hypertarget{classtask__hardware_1_1Task__Hardware_adc6c943215cca3cde91c165c3330fa44}\label{classtask__hardware_1_1Task__Hardware_adc6c943215cca3cde91c165c3330fa44}} 
+\index{task\_hardware.Task\_Hardware@{task\_hardware.Task\_Hardware}!last\_time@{last\_time}}
+\index{last\_time@{last\_time}!task\_hardware.Task\_Hardware@{task\_hardware.Task\_Hardware}}
+\doxysubsubsection{\texorpdfstring{last\_time}{last\_time}}
+{\footnotesize\ttfamily task\+\_\+hardware.\+Task\+\_\+\+Hardware.\+last\+\_\+time}
+
+
+
+Time time of last run. 
+
+Time difference between runs. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{task__hardware_8py}{task\+\_\+hardware.\+py}}\end{DoxyCompactItemize}

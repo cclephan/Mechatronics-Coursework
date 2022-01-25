@@ -1,0 +1,73 @@
+\hypertarget{classshares_1_1Queue}{}\doxysection{shares.\+Queue Class Reference}
+\label{classshares_1_1Queue}\index{shares.Queue@{shares.Queue}}
+
+
+A queue of shared data.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classshares_1_1Queue_aa5c74efcee7f6367bcc9520df83e3a7c}\label{classshares_1_1Queue_aa5c74efcee7f6367bcc9520df83e3a7c}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em Constructs an empty queue of shared values. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classshares_1_1Queue_ae28847cb7ac9cb7315960d51f16d5c0e}{put}} (self, item)
+\begin{DoxyCompactList}\small\item\em Adds an item to the end of the queue. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classshares_1_1Queue_a45835daf8ee60391cca9667a942ade25}{get}} (self)
+\begin{DoxyCompactList}\small\item\em Remove the first item from the front of the queue. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classshares_1_1Queue_acd30993054ef382e801ed2ff50ee4931}{num\+\_\+in}} (self)
+\begin{DoxyCompactList}\small\item\em Find the number of items in the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A queue of shared data. 
+
+Values can be accessed with placed into queue with \mbox{\hyperlink{classshares_1_1Queue_ae28847cb7ac9cb7315960d51f16d5c0e}{put()}} or removed from the queue with \mbox{\hyperlink{classshares_1_1Queue_a45835daf8ee60391cca9667a942ade25}{get()}}. Check if there are items in the queue with \mbox{\hyperlink{classshares_1_1Queue_acd30993054ef382e801ed2ff50ee4931}{num\+\_\+in()}} before using \mbox{\hyperlink{classshares_1_1Queue_a45835daf8ee60391cca9667a942ade25}{get()}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classshares_1_1Queue_a45835daf8ee60391cca9667a942ade25}\label{classshares_1_1Queue_a45835daf8ee60391cca9667a942ade25}} 
+\index{shares.Queue@{shares.Queue}!get@{get}}
+\index{get@{get}!shares.Queue@{shares.Queue}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily def shares.\+Queue.\+get (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Remove the first item from the front of the queue. 
+
+\begin{DoxyReturn}{Returns}
+The value of the item removed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classshares_1_1Queue_acd30993054ef382e801ed2ff50ee4931}\label{classshares_1_1Queue_acd30993054ef382e801ed2ff50ee4931}} 
+\index{shares.Queue@{shares.Queue}!num\_in@{num\_in}}
+\index{num\_in@{num\_in}!shares.Queue@{shares.Queue}}
+\doxysubsubsection{\texorpdfstring{num\_in()}{num\_in()}}
+{\footnotesize\ttfamily def shares.\+Queue.\+num\+\_\+in (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Find the number of items in the queue. 
+
+Call before \mbox{\hyperlink{classshares_1_1Queue_a45835daf8ee60391cca9667a942ade25}{get()}}. \begin{DoxyReturn}{Returns}
+The number of items in the queue 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classshares_1_1Queue_ae28847cb7ac9cb7315960d51f16d5c0e}\label{classshares_1_1Queue_ae28847cb7ac9cb7315960d51f16d5c0e}} 
+\index{shares.Queue@{shares.Queue}!put@{put}}
+\index{put@{put}!shares.Queue@{shares.Queue}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily def shares.\+Queue.\+put (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{item }\end{DoxyParamCaption})}
+
+
+
+Adds an item to the end of the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The new item to append to the queue. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{shares_8py}{shares.\+py}}\end{DoxyCompactItemize}

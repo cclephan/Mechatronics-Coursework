@@ -1,0 +1,64 @@
+\hypertarget{classmotor_1_1Motor}{}\doxysection{motor.\+Motor Class Reference}
+\label{classmotor_1_1Motor}\index{motor.Motor@{motor.Motor}}
+
+
+A motor class for one channel of the \mbox{\hyperlink{classmotor_1_1DRV8847}{DRV8847}}.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classmotor_1_1Motor_a645ad04206c3284735ae4bdb2601d95a}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, motor\+Channel, pin\+CH1, pin\+CH2, timX)
+\begin{DoxyCompactList}\small\item\em Initializes and returns a motor object associated with the \mbox{\hyperlink{classmotor_1_1DRV8847}{DRV8847}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classmotor_1_1Motor_a08f41a32c8b122a8b94496fef2a0a901}{set\+\_\+duty}} (self, duty)
+\begin{DoxyCompactList}\small\item\em Set the PWM duty cycle for the motor channel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmotor_1_1Motor_ac8100a9892a24881169bb828d86d7c4e}\label{classmotor_1_1Motor_ac8100a9892a24881169bb828d86d7c4e}} 
+{\bfseries t2c1}
+\begin{DoxyCompactList}\small\item\em Timer channel to the first motor channel for some motor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmotor_1_1Motor_aebe2f24576c049446103aed61e66de8d}\label{classmotor_1_1Motor_aebe2f24576c049446103aed61e66de8d}} 
+{\bfseries t2c2}
+\begin{DoxyCompactList}\small\item\em Timer channel to the second motor channel for some motor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A motor class for one channel of the \mbox{\hyperlink{classmotor_1_1DRV8847}{DRV8847}}. 
+
+Objects of this class can be used to apply PWM to a given DC motor. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmotor_1_1Motor_a645ad04206c3284735ae4bdb2601d95a}\label{classmotor_1_1Motor_a645ad04206c3284735ae4bdb2601d95a}} 
+\index{motor.Motor@{motor.Motor}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!motor.Motor@{motor.Motor}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def motor.\+Motor.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{motor\+Channel,  }\item[{}]{pin\+CH1,  }\item[{}]{pin\+CH2,  }\item[{}]{timX }\end{DoxyParamCaption})}
+
+
+
+Initializes and returns a motor object associated with the \mbox{\hyperlink{classmotor_1_1DRV8847}{DRV8847}}. 
+
+Creates timer channels that will be used specific to each motor channel. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmotor_1_1Motor_a08f41a32c8b122a8b94496fef2a0a901}\label{classmotor_1_1Motor_a08f41a32c8b122a8b94496fef2a0a901}} 
+\index{motor.Motor@{motor.Motor}!set\_duty@{set\_duty}}
+\index{set\_duty@{set\_duty}!motor.Motor@{motor.Motor}}
+\doxysubsubsection{\texorpdfstring{set\_duty()}{set\_duty()}}
+{\footnotesize\ttfamily def motor.\+Motor.\+set\+\_\+duty (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{duty }\end{DoxyParamCaption})}
+
+
+
+Set the PWM duty cycle for the motor channel. 
+
+This method sets the duty cycle to be sent to the motor to the given level. Positive values cause effort in one direction, negative values in the opposite direction. 
+\begin{DoxyParams}{Parameters}
+{\em duty} & A signed number holding the duty cycle of the PWM signal sent to the motor \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{motor_8py}{motor.\+py}}\end{DoxyCompactItemize}

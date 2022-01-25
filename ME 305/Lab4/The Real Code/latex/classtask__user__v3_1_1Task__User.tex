@@ -1,0 +1,290 @@
+\hypertarget{classtask__user__v3_1_1Task__User}{}\doxysection{task\+\_\+user\+\_\+v3.\+Task\+\_\+\+User Class Reference}
+\label{classtask__user__v3_1_1Task__User}\index{task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}}
+
+
+Task user interface.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classtask__user__v3_1_1Task__User_a229a3d24fa2dae84bc161b0c9df13817}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classtask__user__v3_1_1Task__User_afbd2f29cc56ef285d8545a6e7f1f0c58}{period}}, \mbox{\hyperlink{classtask__user__v3_1_1Task__User_aec54ee79d3b996e99cecfa7a2b2a28a9}{Motor\+Share1}}, Motor\+Share2)
+\begin{DoxyCompactList}\small\item\em Constructs an user task object. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classtask__user__v3_1_1Task__User_aebdbffd2f8f958cf74ad7579020a8782}{run}} (self)
+\begin{DoxyCompactList}\small\item\em Runs helper functions for user task. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classtask__user__v3_1_1Task__User_af4a10401a8cf726bcc098a25b0e6464b}{write}} (self, key\+Command, Motor\+Share)
+\begin{DoxyCompactList}\small\item\em Prints out results from a certain user command. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classtask__user__v3_1_1Task__User_a8f7efe78b070ea6d44121a3e981cb9eb}{read}} (self)
+\begin{DoxyCompactList}\small\item\em Reads serial communication between user and Nucleo. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classtask__user__v3_1_1Task__User_aa5db04031e26773f0f1af11722ff5fe4}{setuprecord}} (self, delt, num, to\+Record, Prompt)
+\begin{DoxyCompactList}\small\item\em Sets up recording data. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classtask__user__v3_1_1Task__User_a2e71c080bd74949b5f2ebbc27e2f7611}{record\+GData}} (self, num, data1, data2)
+\begin{DoxyCompactList}\small\item\em Records data collected. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classtask__user__v3_1_1Task__User_aeffd582a8ab250ce73ec18cf195aa674}{ask\+For\+Num}} (self, num, key\+Command, prompt)
+\begin{DoxyCompactList}\small\item\em Asks for a number from the user. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classtask__user__v3_1_1Task__User_a37b1a792c032c17c9596bb0269a7c010}{transition\+\_\+to}} (self, new\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Transitions states. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__user__v3_1_1Task__User_a31219c65dd778980caf5dd5d14a1857c}\label{classtask__user__v3_1_1Task__User_a31219c65dd778980caf5dd5d14a1857c}} 
+def {\bfseries reset\+\_\+states} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtask__user__v3_1_1Task__User_afbd2f29cc56ef285d8545a6e7f1f0c58}\label{classtask__user__v3_1_1Task__User_afbd2f29cc56ef285d8545a6e7f1f0c58}} 
+{\bfseries period}
+\begin{DoxyCompactList}\small\item\em Defines period as what is called in main for period parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__user__v3_1_1Task__User_ae2de775af258e2839d75f28e73f705c5}\label{classtask__user__v3_1_1Task__User_ae2de775af258e2839d75f28e73f705c5}} 
+{\bfseries next\+\_\+time}
+\begin{DoxyCompactList}\small\item\em Time adjusts once clock reaches the period value plus the current time. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtask__user__v3_1_1Task__User_aba5d5a6aa7c82b6751a980620d9c4abc}{State}}
+\begin{DoxyCompactList}\small\item\em Sets the task to whatever state it is in based on FSM conditions (Start at state 0) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__user__v3_1_1Task__User_aec54ee79d3b996e99cecfa7a2b2a28a9}\label{classtask__user__v3_1_1Task__User_aec54ee79d3b996e99cecfa7a2b2a28a9}} 
+{\bfseries Motor\+Share1}
+\begin{DoxyCompactList}\small\item\em Shares all relevavant motor info \mbox{[}Encoder number (int), Current Position (ticks), Current delta (ticks/period), duty(int), Zero (boolean), Fault(boolean)\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__user__v3_1_1Task__User_ad597dc0bb70a8951d1504ad49f9c9cca}\label{classtask__user__v3_1_1Task__User_ad597dc0bb70a8951d1504ad49f9c9cca}} 
+{\bfseries Motor\+Share2}
+\item 
+\mbox{\hyperlink{classtask__user__v3_1_1Task__User_aa693ce5b7f89787dee79aeb47d23b80f}{PID}}
+\begin{DoxyCompactList}\small\item\em PID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtask__user__v3_1_1Task__User_a99c6b930f91ae25e7e16e8b51e3db132}{t\+PID}}
+\begin{DoxyCompactList}\small\item\em Time at which PID gains will be written based on difference between itself and current time (time delay). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__user__v3_1_1Task__User_af74f701a43ab9cea046bf631f84843dd}\label{classtask__user__v3_1_1Task__User_af74f701a43ab9cea046bf631f84843dd}} 
+{\bfseries PIDInx}
+\begin{DoxyCompactList}\small\item\em Index of PID gains of shared PID variable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__user__v3_1_1Task__User_aba3fa3122cc6d28e16e34b3872e787e0}\label{classtask__user__v3_1_1Task__User_aba3fa3122cc6d28e16e34b3872e787e0}} 
+{\bfseries Motor\+Stepped}
+\begin{DoxyCompactList}\small\item\em Either a 0 or 1 depending on motor ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtask__user__v3_1_1Task__User_aa00c0e6aefa29a6fd0b7e2b3710ccf6b}{build\+Duty}}
+\begin{DoxyCompactList}\small\item\em m commands \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__user__v3_1_1Task__User_a1d04a242e53dae6da5cc4cc07cb0cd01}\label{classtask__user__v3_1_1Task__User_a1d04a242e53dae6da5cc4cc07cb0cd01}} 
+{\bfseries building}
+\item 
+\mbox{\hyperlink{classtask__user__v3_1_1Task__User_ae4a3ea0b35340842074494f6b2a886c8}{display\+Pos}}
+\begin{DoxyCompactList}\small\item\em g commands \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__user__v3_1_1Task__User_ad3807dabf16309538525c1544d18ccd9}\label{classtask__user__v3_1_1Task__User_ad3807dabf16309538525c1544d18ccd9}} 
+{\bfseries tf}
+\item 
+\mbox{\Hypertarget{classtask__user__v3_1_1Task__User_a217d9d8bcd8ccdc339c645699de75d2c}\label{classtask__user__v3_1_1Task__User_a217d9d8bcd8ccdc339c645699de75d2c}} 
+{\bfseries to}
+\item 
+\mbox{\Hypertarget{classtask__user__v3_1_1Task__User_a620149122be530386e943212995ac4c1}\label{classtask__user__v3_1_1Task__User_a620149122be530386e943212995ac4c1}} 
+{\bfseries to\+Record}
+\item 
+\mbox{\Hypertarget{classtask__user__v3_1_1Task__User_a66e82b3cc258566575423747efbe883c}\label{classtask__user__v3_1_1Task__User_a66e82b3cc258566575423747efbe883c}} 
+{\bfseries Prompt}
+\item 
+\mbox{\Hypertarget{classtask__user__v3_1_1Task__User_ac8e0914e0f72a494303e58fe06322d5d}\label{classtask__user__v3_1_1Task__User_ac8e0914e0f72a494303e58fe06322d5d}} 
+{\bfseries t\+Array}
+\begin{DoxyCompactList}\small\item\em Array for time data collected for g command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__user__v3_1_1Task__User_a457cc1130b704e0ebdc23e93af37e9d9}\label{classtask__user__v3_1_1Task__User_a457cc1130b704e0ebdc23e93af37e9d9}} 
+{\bfseries Data\+Array1}
+\begin{DoxyCompactList}\small\item\em First array for data collected for g command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__user__v3_1_1Task__User_ab4f4d86f5eef969f33bcb6762a04b984}\label{classtask__user__v3_1_1Task__User_ab4f4d86f5eef969f33bcb6762a04b984}} 
+{\bfseries Data\+Array2}
+\begin{DoxyCompactList}\small\item\em Second array for data collected for g command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Task user interface. 
+
+Handles all serial communication between user and backend running on Nucleo. Creates user friendly interface for all key commands and communicates with encoder task. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtask__user__v3_1_1Task__User_a229a3d24fa2dae84bc161b0c9df13817}\label{classtask__user__v3_1_1Task__User_a229a3d24fa2dae84bc161b0c9df13817}} 
+\index{task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def task\+\_\+user\+\_\+v3.\+Task\+\_\+\+User.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{period,  }\item[{}]{Motor\+Share1,  }\item[{}]{Motor\+Share2 }\end{DoxyParamCaption})}
+
+
+
+Constructs an user task object. 
+
+Instantiates period, , a variable changing for every period, state, and variables used for actions and conditions in user commands. 
+\begin{DoxyParams}{Parameters}
+{\em Period} & at which encoder updates defined by user in main. \\
+\hline
+{\em Motor\+Share1} & contains all shared values for motor 1 \\
+\hline
+{\em Motor\+Share2} & contains all shared values for motor 2 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtask__user__v3_1_1Task__User_aeffd582a8ab250ce73ec18cf195aa674}\label{classtask__user__v3_1_1Task__User_aeffd582a8ab250ce73ec18cf195aa674}} 
+\index{task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}!askForNum@{askForNum}}
+\index{askForNum@{askForNum}!task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}}
+\doxysubsubsection{\texorpdfstring{askForNum()}{askForNum()}}
+{\footnotesize\ttfamily def task\+\_\+user\+\_\+v3.\+Task\+\_\+\+User.\+ask\+For\+Num (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{num,  }\item[{}]{key\+Command,  }\item[{}]{prompt }\end{DoxyParamCaption})}
+
+
+
+Asks for a number from the user. 
+
+Adjusts key\+Command based on the motor ID (num) and only accepts values between 0 and 9. Additionally takes in backspace, negative, or decimal command. Once the user finishes typing their number they press enter and the number is returned. Otherwise the original duty is returned. 
+\begin{DoxyParams}{Parameters}
+{\em num} & is the motor ID subtracted by 1, so either a 0 for motor 1, or 1 for motor 2. \\
+\hline
+{\em key\+Command} & is the read ASCII decimal value of character entered in Pu\+TTY. \\
+\hline
+{\em duty} & is the initial duty in Motor\+Shares list. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+duty is motor PWM duty 
+
+float(prompt + self.\+building\mbox{[}num\mbox{]}) is the float of whatever number was built by the user in entering their desired duty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__user__v3_1_1Task__User_a8f7efe78b070ea6d44121a3e981cb9eb}\label{classtask__user__v3_1_1Task__User_a8f7efe78b070ea6d44121a3e981cb9eb}} 
+\index{task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}!read@{read}}
+\index{read@{read}!task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily def task\+\_\+user\+\_\+v3.\+Task\+\_\+\+User.\+read (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reads serial communication between user and Nucleo. 
+
+Comm\+Reader detects if any communication is being sent by the user, and if so then it is read and stored as a byte with variable key\+Command. The read function then clears the queue and returns key\+Command byte value. If the user wants to reread the user interface they can press escape where state transitions back to 0 (initialize). \mbox{\Hypertarget{classtask__user__v3_1_1Task__User_a2e71c080bd74949b5f2ebbc27e2f7611}\label{classtask__user__v3_1_1Task__User_a2e71c080bd74949b5f2ebbc27e2f7611}} 
+\index{task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}!recordGData@{recordGData}}
+\index{recordGData@{recordGData}!task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}}
+\doxysubsubsection{\texorpdfstring{recordGData()}{recordGData()}}
+{\footnotesize\ttfamily def task\+\_\+user\+\_\+v3.\+Task\+\_\+\+User.\+record\+GData (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{num,  }\item[{}]{data1,  }\item[{}]{data2 }\end{DoxyParamCaption})}
+
+
+
+Records data collected. 
+
+Appends to data1 and 2 arrays of data collected over some time difference and resets all arrays once recording has been finished. 
+\begin{DoxyParams}{Parameters}
+{\em num} & is the motor ID subtracted by 1, so either a 0 for motor 1, or 1 for motor 2. \\
+\hline
+{\em data1} & is the first variable being recorded \\
+\hline
+{\em data2} & is the second variable being recorded \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtask__user__v3_1_1Task__User_aebdbffd2f8f958cf74ad7579020a8782}\label{classtask__user__v3_1_1Task__User_aebdbffd2f8f958cf74ad7579020a8782}} 
+\index{task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}!run@{run}}
+\index{run@{run}!task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily def task\+\_\+user\+\_\+v3.\+Task\+\_\+\+User.\+run (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Runs helper functions for user task. 
+
+Transitions through states for every period and prints out user interface. When the PID gains are changed then a time delay of 1 second is implemented before setting the new motor duty cycle. State 2 occurs when either a 1 or 2 is pressed where prompts tell the user to type the new PID gains/set-\/point velocity. Once the user has finished with each prompt data collection is prepared and completed then transitions back to state one (wait for user input). \mbox{\Hypertarget{classtask__user__v3_1_1Task__User_aa5db04031e26773f0f1af11722ff5fe4}\label{classtask__user__v3_1_1Task__User_aa5db04031e26773f0f1af11722ff5fe4}} 
+\index{task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}!setuprecord@{setuprecord}}
+\index{setuprecord@{setuprecord}!task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}}
+\doxysubsubsection{\texorpdfstring{setuprecord()}{setuprecord()}}
+{\footnotesize\ttfamily def task\+\_\+user\+\_\+v3.\+Task\+\_\+\+User.\+setuprecord (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{delt,  }\item[{}]{num,  }\item[{}]{to\+Record,  }\item[{}]{Prompt }\end{DoxyParamCaption})}
+
+
+
+Sets up recording data. 
+
+Prints collecting data prompt based on record time, motor number, what is being recorded, and table title prompt. 
+\begin{DoxyParams}{Parameters}
+{\em delt} & is the time to record data. \\
+\hline
+{\em num} & determines which motor the user records from. \\
+\hline
+{\em to\+Record} & contains a list of what values will be recorded. \\
+\hline
+{\em Prompt} & contains table title prompt. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtask__user__v3_1_1Task__User_a37b1a792c032c17c9596bb0269a7c010}\label{classtask__user__v3_1_1Task__User_a37b1a792c032c17c9596bb0269a7c010}} 
+\index{task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}!transition\_to@{transition\_to}}
+\index{transition\_to@{transition\_to}!task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}}
+\doxysubsubsection{\texorpdfstring{transition\_to()}{transition\_to()}}
+{\footnotesize\ttfamily def task\+\_\+user\+\_\+v3.\+Task\+\_\+\+User.\+transition\+\_\+to (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{new\+\_\+state }\end{DoxyParamCaption})}
+
+
+
+Transitions states. 
+
+When called takes in parameter for whatever state needs to be transitioned to. 
+\begin{DoxyParams}{Parameters}
+{\em Next} & state to transition to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtask__user__v3_1_1Task__User_af4a10401a8cf726bcc098a25b0e6464b}\label{classtask__user__v3_1_1Task__User_af4a10401a8cf726bcc098a25b0e6464b}} 
+\index{task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}!write@{write}}
+\index{write@{write}!task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily def task\+\_\+user\+\_\+v3.\+Task\+\_\+\+User.\+write (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{key\+Command,  }\item[{}]{Motor\+Share }\end{DoxyParamCaption})}
+
+
+
+Prints out results from a certain user command. 
+
+Contains logic for all user commands such as printing motor velocity/position, zeroing position, reseting faults, collecting 30 seconds of data, and collecting 10 seconds of an impulse step function in closed loop control, 
+\begin{DoxyParams}{Parameters}
+{\em Key} & command that is found by read function, used in logic \\
+\hline
+{\em Motor\+Share} & is a tuple containing all shared values. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtask__user__v3_1_1Task__User_aa00c0e6aefa29a6fd0b7e2b3710ccf6b}\label{classtask__user__v3_1_1Task__User_aa00c0e6aefa29a6fd0b7e2b3710ccf6b}} 
+\index{task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}!buildDuty@{buildDuty}}
+\index{buildDuty@{buildDuty}!task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}}
+\doxysubsubsection{\texorpdfstring{buildDuty}{buildDuty}}
+{\footnotesize\ttfamily task\+\_\+user\+\_\+v3.\+Task\+\_\+\+User.\+build\+Duty}
+
+
+
+m commands 
+
+Boolean that turns true once m command is sent by user \mbox{\Hypertarget{classtask__user__v3_1_1Task__User_ae4a3ea0b35340842074494f6b2a886c8}\label{classtask__user__v3_1_1Task__User_ae4a3ea0b35340842074494f6b2a886c8}} 
+\index{task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}!displayPos@{displayPos}}
+\index{displayPos@{displayPos}!task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}}
+\doxysubsubsection{\texorpdfstring{displayPos}{displayPos}}
+{\footnotesize\ttfamily task\+\_\+user\+\_\+v3.\+Task\+\_\+\+User.\+display\+Pos}
+
+
+
+g commands 
+
+Boolean that turns true once g command is sent by user \mbox{\Hypertarget{classtask__user__v3_1_1Task__User_aa693ce5b7f89787dee79aeb47d23b80f}\label{classtask__user__v3_1_1Task__User_aa693ce5b7f89787dee79aeb47d23b80f}} 
+\index{task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}!PID@{PID}}
+\index{PID@{PID}!task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}}
+\doxysubsubsection{\texorpdfstring{PID}{PID}}
+{\footnotesize\ttfamily task\+\_\+user\+\_\+v3.\+Task\+\_\+\+User.\+PID}
+
+
+
+PID. 
+
+Stores returned key command from read function. \mbox{\Hypertarget{classtask__user__v3_1_1Task__User_aba5d5a6aa7c82b6751a980620d9c4abc}\label{classtask__user__v3_1_1Task__User_aba5d5a6aa7c82b6751a980620d9c4abc}} 
+\index{task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}!State@{State}}
+\index{State@{State}!task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily task\+\_\+user\+\_\+v3.\+Task\+\_\+\+User.\+State}
+
+
+
+Sets the task to whatever state it is in based on FSM conditions (Start at state 0) 
+
+Current time.
+
+need to fix Resets new time for function to run \mbox{\Hypertarget{classtask__user__v3_1_1Task__User_a99c6b930f91ae25e7e16e8b51e3db132}\label{classtask__user__v3_1_1Task__User_a99c6b930f91ae25e7e16e8b51e3db132}} 
+\index{task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}!tPID@{tPID}}
+\index{tPID@{tPID}!task\_user\_v3.Task\_User@{task\_user\_v3.Task\_User}}
+\doxysubsubsection{\texorpdfstring{tPID}{tPID}}
+{\footnotesize\ttfamily task\+\_\+user\+\_\+v3.\+Task\+\_\+\+User.\+t\+PID}
+
+
+
+Time at which PID gains will be written based on difference between itself and current time (time delay). 
+
+PID value that is built by ask\+For\+Num method. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+task\+\_\+user\+\_\+v3.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,33 @@
+\hypertarget{encoder2_8py}{}\doxysection{encoder2.\+py File Reference}
+\label{encoder2_8py}\index{encoder2.py@{encoder2.py}}
+
+
+Encoder driver that handles instantiates timers and channels for encoder pins.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classencoder2_1_1Encoder}{encoder2.\+Encoder}}
+\begin{DoxyCompactList}\small\item\em Interface with quadrature encoders. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{encoder2_8py_a83c8d65555e606c3ec10cd5882a721e7}\label{encoder2_8py_a83c8d65555e606c3ec10cd5882a721e7}} 
+tuple {\bfseries encoder2.\+Encoder\+\_\+\+Period} = (2$\ast$$\ast$16)
+\begin{DoxyCompactList}\small\item\em Highest tick count for Nucleo 16bit microcontroller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Encoder driver that handles instantiates timers and channels for encoder pins. 
+
+Functions are set for basic functionality to get, set, and find delta of encoder
+
+Driver creates a timer which can count up to the 16 bit limit, and channels set up basic logic for what counts as a tick moving the rotor. The driver also acts as the very basic functionallity of transmitting encoder position to the encoder task \begin{DoxyAuthor}{Author}
+Christian Clephan 
+
+John Bennett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 16, 2021 
+\end{DoxyDate}

@@ -1,0 +1,144 @@
+\hypertarget{classencoder2_1_1Encoder}{}\doxysection{encoder2.\+Encoder Class Reference}
+\label{classencoder2_1_1Encoder}\index{encoder2.Encoder@{encoder2.Encoder}}
+
+
+Interface with quadrature encoders.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classencoder2_1_1Encoder_ac07c2e40d692811fc891958611601a5f}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, Pinch1, Pinch2, timer\+Num)
+\begin{DoxyCompactList}\small\item\em Constructs an encoder object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classencoder2_1_1Encoder_aad8db0affb43be21d40fb55a49de76cd}\label{classencoder2_1_1Encoder_aad8db0affb43be21d40fb55a49de76cd}} 
+def {\bfseries update} (self)
+\begin{DoxyCompactList}\small\item\em Update function takes in values from other basic functions to define the encoder position with and without overflow. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classencoder2_1_1Encoder_a9056bb082d0d6f290a8ce5e3902f3c92}{get\+\_\+position}} (self)
+\begin{DoxyCompactList}\small\item\em Returns encoder position. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classencoder2_1_1Encoder_ad3cb599630f6ceab31ccc9811c7d24c2}{set\+\_\+position}} (self, pos)
+\begin{DoxyCompactList}\small\item\em Sets encoder position. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classencoder2_1_1Encoder_a9d833e5c1db37b652d11db39b441421c}{update\+\_\+delta}} (self)
+\begin{DoxyCompactList}\small\item\em Returns encoder delta. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classencoder2_1_1Encoder_a46ce58359cad4a1c37aec0b75c542191}{get\+\_\+delta}} (self)
+\begin{DoxyCompactList}\small\item\em Quick method to get delta value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classencoder2_1_1Encoder_a7b11bc164a6d0acb8eb63ec4de5107b8}\label{classencoder2_1_1Encoder_a7b11bc164a6d0acb8eb63ec4de5107b8}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em Prints encoder position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classencoder2_1_1Encoder_ad7470ac12db4ff6115b2c368252ec47c}\label{classencoder2_1_1Encoder_ad7470ac12db4ff6115b2c368252ec47c}} 
+{\bfseries timX}
+\begin{DoxyCompactList}\small\item\em Timer created with no prescalar that counts up to 2$^\wedge$16-\/1 (before overflow) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classencoder2_1_1Encoder_a6aefbb08c7e5c81217f8e3a1659ea771}{position}}
+\begin{DoxyCompactList}\small\item\em Timer channel to indicate if a tick has occured or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classencoder2_1_1Encoder_a46d717f15470d7c548256af9999a24eb}\label{classencoder2_1_1Encoder_a46d717f15470d7c548256af9999a24eb}} 
+{\bfseries Eposition}
+\begin{DoxyCompactList}\small\item\em Position of the encoder that can only go up to max bit count (2$^\wedge$16-\/1) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classencoder2_1_1Encoder_a444fdae1abdc1c1fb3bfd8d5edc9534c}\label{classencoder2_1_1Encoder_a444fdae1abdc1c1fb3bfd8d5edc9534c}} 
+{\bfseries delp}
+\begin{DoxyCompactList}\small\item\em Instantiates delta position value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface with quadrature encoders. 
+
+Contains all basic encoder functionallity that will be sent to task encoder when task user requests encoder information. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classencoder2_1_1Encoder_ac07c2e40d692811fc891958611601a5f}\label{classencoder2_1_1Encoder_ac07c2e40d692811fc891958611601a5f}} 
+\index{encoder2.Encoder@{encoder2.Encoder}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!encoder2.Encoder@{encoder2.Encoder}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def encoder2.\+Encoder.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{Pinch1,  }\item[{}]{Pinch2,  }\item[{}]{timer\+Num }\end{DoxyParamCaption})}
+
+
+
+Constructs an encoder object. 
+
+Creates timer thats number is defined in task encoder, counting up to 16 bit overflow keeping track of encoder position. The timer channels can be defined in task encoder where pins are defined for the hardware encoders. Lastly two variables are created one accounting for overflow while one can go up and down infinitely. 
+\begin{DoxyParams}{Parameters}
+{\em Pinch1} & defines channel one pin in task encoder \\
+\hline
+{\em Pinch2} & defines channel two pin in task encoder \\
+\hline
+{\em timer\+Num} & defines the timer number that will be used for pyb Timer. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classencoder2_1_1Encoder_a46ce58359cad4a1c37aec0b75c542191}\label{classencoder2_1_1Encoder_a46ce58359cad4a1c37aec0b75c542191}} 
+\index{encoder2.Encoder@{encoder2.Encoder}!get\_delta@{get\_delta}}
+\index{get\_delta@{get\_delta}!encoder2.Encoder@{encoder2.Encoder}}
+\doxysubsubsection{\texorpdfstring{get\_delta()}{get\_delta()}}
+{\footnotesize\ttfamily def encoder2.\+Encoder.\+get\+\_\+delta (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Quick method to get delta value. 
+
+\begin{DoxyReturn}{Returns}
+Change in encoder position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classencoder2_1_1Encoder_a9056bb082d0d6f290a8ce5e3902f3c92}\label{classencoder2_1_1Encoder_a9056bb082d0d6f290a8ce5e3902f3c92}} 
+\index{encoder2.Encoder@{encoder2.Encoder}!get\_position@{get\_position}}
+\index{get\_position@{get\_position}!encoder2.Encoder@{encoder2.Encoder}}
+\doxysubsubsection{\texorpdfstring{get\_position()}{get\_position()}}
+{\footnotesize\ttfamily def encoder2.\+Encoder.\+get\+\_\+position (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns encoder position. 
+
+\begin{DoxyReturn}{Returns}
+The position of the encoder shaft 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classencoder2_1_1Encoder_ad3cb599630f6ceab31ccc9811c7d24c2}\label{classencoder2_1_1Encoder_ad3cb599630f6ceab31ccc9811c7d24c2}} 
+\index{encoder2.Encoder@{encoder2.Encoder}!set\_position@{set\_position}}
+\index{set\_position@{set\_position}!encoder2.Encoder@{encoder2.Encoder}}
+\doxysubsubsection{\texorpdfstring{set\_position()}{set\_position()}}
+{\footnotesize\ttfamily def encoder2.\+Encoder.\+set\+\_\+position (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pos }\end{DoxyParamCaption})}
+
+
+
+Sets encoder position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & new position of the encoder shaft \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classencoder2_1_1Encoder_a9d833e5c1db37b652d11db39b441421c}\label{classencoder2_1_1Encoder_a9d833e5c1db37b652d11db39b441421c}} 
+\index{encoder2.Encoder@{encoder2.Encoder}!update\_delta@{update\_delta}}
+\index{update\_delta@{update\_delta}!encoder2.Encoder@{encoder2.Encoder}}
+\doxysubsubsection{\texorpdfstring{update\_delta()}{update\_delta()}}
+{\footnotesize\ttfamily def encoder2.\+Encoder.\+update\+\_\+delta (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns encoder delta. 
+
+\begin{DoxyReturn}{Returns}
+The change in position of the encoder shaft between the two most recent updates 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classencoder2_1_1Encoder_a6aefbb08c7e5c81217f8e3a1659ea771}\label{classencoder2_1_1Encoder_a6aefbb08c7e5c81217f8e3a1659ea771}} 
+\index{encoder2.Encoder@{encoder2.Encoder}!position@{position}}
+\index{position@{position}!encoder2.Encoder@{encoder2.Encoder}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily encoder2.\+Encoder.\+position}
+
+
+
+Timer channel to indicate if a tick has occured or not. 
+
+Other timer channel to indicate if a tick has occured when the other channel is on
+
+Position of the encoder that can go infinitely up or down 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{encoder2_8py}{encoder2.\+py}}\end{DoxyCompactItemize}
