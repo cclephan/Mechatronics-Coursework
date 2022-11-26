@@ -1,0 +1,7 @@
+<map id="baseshare.h" name="baseshare.h">
+<area shape="rect" id="node1" title="Headers for a base class for type&#45;safe, thread&#45;safe task data exchange classes." alt="" coords="136,5,229,32"/>
+<area shape="rect" id="node2" href="$baseshare_8cpp.html" title="Source code of a base class for type&#45;safe, thread&#45;safe task data exchange classes." alt="" coords="5,80,112,107"/>
+<area shape="rect" id="node3" href="$taskqueue_8h.html" title=" " alt="" coords="136,80,229,107"/>
+<area shape="rect" id="node5" href="$taskshare_8h.html" title="Data which can be shared between tasks in a thread&#45;safe manner." alt="" coords="253,80,344,107"/>
+<area shape="rect" id="node4" href="$textqueue_8h.html" title=" " alt="" coords="137,155,228,181"/>
+</map>
